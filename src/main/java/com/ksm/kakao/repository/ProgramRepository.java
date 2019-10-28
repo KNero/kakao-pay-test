@@ -1,6 +1,6 @@
 package com.ksm.kakao.repository;
 
-import com.ksm.kakao.domain.EcotourismProgram;
+import com.ksm.kakao.entity.EcotourismProgram;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

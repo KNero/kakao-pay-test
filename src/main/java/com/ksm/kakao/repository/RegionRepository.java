@@ -1,6 +1,6 @@
 package com.ksm.kakao.repository;
 
-import com.ksm.kakao.domain.ServiceRegion;
+import com.ksm.kakao.entity.ServiceRegion;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

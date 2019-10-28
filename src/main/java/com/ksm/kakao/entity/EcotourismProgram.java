@@ -1,4 +1,4 @@
-package com.ksm.kakao.domain;
+package com.ksm.kakao.entity;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,7 +1,7 @@
 package com.ksm.kakao.service;
 
 import com.ksm.kakao.controller.ApiEcoControllerTest;
-import com.ksm.kakao.domain.EcotourismProgram;
+import com.ksm.kakao.entity.EcotourismProgram;
 import com.ksm.kakao.repository.RegionRepository;
 import com.ksm.kakao.repository.ProgramRepository;
 import org.junit.Test;

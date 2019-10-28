@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 @Component
 public class JwtSecurityFilter extends JwtFilter<JwtSecurityFilter.LoginInfo> {
     private static final String JWT_SECRET_KEY = "0651b92344b34c95a4d871f9db2e4d38";
-//    private static final long TOKE_EXPIRED_MS = TimeUnit.MINUTES.toMillis(30);
+    private static final long TOKE_EXPIRED_MS = TimeUnit.HOURS.toMillis(3);
 
     @Bean
     public JwtSecurity<LoginInfo> jwtFilter() {
@@ -35,7 +35,7 @@ public class JwtSecurityFilter extends JwtFilter<JwtSecurityFilter.LoginInfo> {
                         AuthToken.builder()
                                 .info(data.toMap())
                                 .role("user")
-//                                .expirationTime(new Date(System.currentTimeMillis() + TOKE_EXPIRED_MS))
+                                .expirationTime(new Date(System.currentTimeMillis() + TOKE_EXPIRED_MS))
                                 .build())
                 .setObjectConverter(LoginInfo::of)
                 .build();

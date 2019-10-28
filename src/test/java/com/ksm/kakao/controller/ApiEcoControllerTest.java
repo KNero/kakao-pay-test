@@ -3,7 +3,7 @@ package com.ksm.kakao.controller;
 import com.ksm.kakao.TestHelper;
 import com.ksm.kakao.controller.dto.SaveRequest;
 import com.ksm.kakao.controller.dto.SearchRequest;
-import com.ksm.kakao.domain.EcotourismProgram;
+import com.ksm.kakao.entity.EcotourismProgram;
 import com.ksm.kakao.repository.ProgramRepository;
 import com.ksm.kakao.repository.RegionRepository;
 import com.ksm.kakao.service.DataRow;

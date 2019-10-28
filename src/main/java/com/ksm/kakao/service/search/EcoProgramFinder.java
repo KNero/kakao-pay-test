@@ -1,6 +1,6 @@
 package com.ksm.kakao.service.search;
 
-import com.ksm.kakao.domain.EcotourismProgram;
+import com.ksm.kakao.entity.EcotourismProgram;
 import com.ksm.kakao.repository.ProgramRepository;
 import com.ksm.kakao.repository.RegionRepository;
 import com.ksm.kakao.service.DataRow;
@@ -106,7 +106,7 @@ public class EcoProgramFinder {
         private String region;
 
         private List<Map<String, String>> resultList = new ArrayList<>();
-        private String searchRegionCode;
+        private String searchRegionCode = "";
 
         private RegionFinder(String region) {
             this.region = region;
@@ -211,7 +211,7 @@ public class EcoProgramFinder {
         private String keyword;
 
         private float maxScore;
-        private String programId;
+        private String programId = "";
 
         private RecommendationFinder(String region, String keyword) {
             this.region = region;
