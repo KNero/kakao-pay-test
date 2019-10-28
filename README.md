@@ -44,31 +44,22 @@ signin, signup 을 제외한 모든 API 는 jwt 를 검사하기 때문에 heade
 ```
 Authorization: Bearer eyJyb2xlIjoidXNlciIsImFsZyI6IkhTMjU2In0=.eyJpZCI6InRlc3QifQ==.Oq/r00PxlUnq5DuNkX49CjE3fsA6KLJk/RcPZBlAPLI=
 ```
-- 계정 생성 : POST /api/user/signup
-- 로그인 : POST /api/user/signin
-- 토큰 재발급 : POST /api/user/refresh
+|API설명|요청 URL|input|output|
+|:------|:--------------------|:----|:----|
+|계정 생성|POST /api/user/signup|{<br>"ID": "test",<br>"PW": "password"<br>}|{<br>"jwt": "eyJy..."<br>}|
+|로그인|POST /api/user/signin|{<br>"ID": "test",<br>"PW": "password"<br>}|{<br>"jwt": "eyJy..."<br>}|
+|토큰 재발급|POST /api/user/refresh|{<br>"ID": "test",<br>"PW": "password"<br>}|{<br>"jwt": "eyJy..."<br>}|
 ---
-- 파일 데이터 저장: POST /api/eco/dump-data
-- 지역코드로 조회: GET /api/eco
-```
-{
-	"regionCode": "reg1454"
-}
-```
-- 프로그램 추가: POST /api/eco
-- 프로그램 수정: PUT /api/eco/{programId}
-```
-추가/수정 입력
-{
-	"name": "test-name1",
-	"theme": "test-theme1",
-	"region": "test-location1",
-	"introduce": "test-introduce1",
-	"detail": "test-detail1"
-}
-```
+|API설명|요청 URL|input|output|
+|:------|:--------------------|:----|:----|
+|파일 데이터 저장|POST /api/eco/dump-data|||
+|지역코드로 조회|GET /api/eco|{<br>"regionCode": "reg1454"<br>}|{<br>"data": [<br>    {<br>"id": "prg1462",<br>"name": "\"속리산과 함께하는 자연나누리\"",<br>"theme": "문화생태체험,",<br>"region": "충청북도 보은군 속리산면 상판리 법주사로84",<br>"regionCode": "reg1454",<br>"introduce": "다양한 프로그램 중 1~2가지를 선택, 일정을 협의 하여 진행.",<br>"detail": " 영화, 연극, 놀이공원, 동물원, 기마체험 등\r 다양한 문화적 혜택을 다문화, 저소득층 등\r 에게 제공하는 프로그램."<br>}<br>]<br>}|
+|프로그램 추가|POST /api/eco|{<br>"name": "test-name",<br>"theme": "test-theme",<br>"region": "경기도 구리시",<br>"introduce": "test-introduce",<br>"detail": "test-detail"<br>}|{<br>"id": "prg8368",<br>"name": "test-name",<br>"theme": "test-theme",<br>"region": "경기도 구리시",<br>"introduce": "test-introduce",<br>"detail": "test-detail"<br>}|
+|프로그램 수정|PUT /api/eco/{programId}|{<br>"name": "test-name",<br>"theme": "test-theme",<br>"region": "경기도 구리시",<br>"introduce": "test-introduce",<br>"detail": "test-detail"<br>}|{<br>"id": "prg8368",<br>"name": "test-name",<br>"theme": "test-theme",<br>"region": "경기도 구리시",<br>"introduce": "test-introduce",<br>"detail": "test-detail"<br>}|
 ---
-- 특정지역 프로그램, 테마 검색: GET /api/eco/region-program
-- 프로그램 소개에 문자열 포함된 지역 검색:  GET /api/eco/count-introduce-word
-- 전체 단어 출현빈도 계산: GET /api/eco/count-all-word
-- 프로그램 추천: GET /api/eco/recommend
+|API설명|요청 URL|input|output|
+|:------|:--------------------|:----|:----|
+|특정지역 프로그램|GET /api/eco/region-program|{<br>"region": "강원도"<br>}|{<br>"programs": [<br>{<br>"prgm_name": "자연과 문화를 함께 즐기는 설악산 기행",<br>"theme": "문화생태체험,자연생태체험,"<br>},<br>{<br>"prgm_name": "[설악산] 설악산에서 길을 묻다(설악을 내 품에)",<br>"theme": "아동·청소년 체험학습,"<br>}, ...<br>],<br>"region": "reg7283"}|
+|프로그램 소개에 문자열 포함된 지역 검색|GET /api/eco/count-introduce-word|{<br>"keyword": "세계문화유산"<br>}|{<br>"programs": [<br>{<br>"count": 2,<br>"region": "경상북도 경주시"<br>}<br>],<br>"keyword": "세계문화유산"<br>}|
+|전체 단어 출현빈도 계산|GET /api/eco/count-all-word|{<br>"keyword": "문화"<br>}|{<br>"count": 59,<br>"keyword": "문화"<br>}|
+|프로그램 추천|GET /api/eco/recommend|{<br>"region": "남해",<br>"keyword": "생태체험"<br>}|
