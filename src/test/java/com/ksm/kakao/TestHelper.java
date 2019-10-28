@@ -1,9 +1,9 @@
 package com.ksm.kakao;
 
-import com.ksm.kakao.repository.EcotourismProgram;
+import com.ksm.kakao.domain.EcotourismProgram;
 import com.ksm.kakao.repository.ProgramRepository;
 import com.ksm.kakao.repository.RegionRepository;
-import com.ksm.kakao.repository.ServiceRegion;
+import com.ksm.kakao.domain.ServiceRegion;
 import org.mockito.Mockito;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;

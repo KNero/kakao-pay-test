@@ -1,6 +1,6 @@
 package com.ksm.kakao.service;
 
-import com.ksm.kakao.repository.EcotourismProgram;
+import com.ksm.kakao.domain.EcotourismProgram;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

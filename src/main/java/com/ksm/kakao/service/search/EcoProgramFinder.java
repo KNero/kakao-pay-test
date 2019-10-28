@@ -1,6 +1,6 @@
 package com.ksm.kakao.service.search;
 
-import com.ksm.kakao.repository.EcotourismProgram;
+import com.ksm.kakao.domain.EcotourismProgram;
 import com.ksm.kakao.repository.ProgramRepository;
 import com.ksm.kakao.repository.RegionRepository;
 import com.ksm.kakao.service.DataRow;

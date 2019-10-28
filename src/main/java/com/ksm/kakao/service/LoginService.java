@@ -1,7 +1,7 @@
 package com.ksm.kakao.service;
 
 import com.ksm.kakao.JwtSecurityFilter;
-import com.ksm.kakao.repository.UserInfo;
+import com.ksm.kakao.domain.UserInfo;
 import com.ksm.kakao.repository.UserInfoRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

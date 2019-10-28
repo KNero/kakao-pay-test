@@ -2,7 +2,7 @@ package com.ksm.kakao.controller;
 
 import com.ksm.kakao.JwtSecurityFilter;
 import com.ksm.kakao.controller.dto.SignRequest;
-import com.ksm.kakao.repository.UserInfo;
+import com.ksm.kakao.domain.UserInfo;
 import com.ksm.kakao.repository.UserInfoRepository;
 import com.ksm.kakao.service.LoginService;
 import org.junit.Assert;

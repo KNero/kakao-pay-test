@@ -2,10 +2,10 @@ package com.ksm.kakao.service;
 
 import com.ksm.kakao.controller.dto.SaveRequest;
 import com.ksm.kakao.controller.dto.SearchRequest;
-import com.ksm.kakao.repository.EcotourismProgram;
+import com.ksm.kakao.domain.EcotourismProgram;
 import com.ksm.kakao.repository.RegionRepository;
 import com.ksm.kakao.repository.ProgramRepository;
-import com.ksm.kakao.repository.ServiceRegion;
+import com.ksm.kakao.domain.ServiceRegion;
 import com.ksm.kakao.service.search.EcoProgramFinder;
 import com.ksm.kakao.service.search.Finder;
 import lombok.AllArgsConstructor;
