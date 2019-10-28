@@ -44,6 +44,8 @@ signin, signup 을 제외한 모든 API 는 jwt 를 검사하기 때문에 heade
 ```
 Authorization: Bearer eyJyb2xlIjoidXNlciIsImFsZyI6IkhTMjU2In0=.eyJpZCI6InRlc3QifQ==.Oq/r00PxlUnq5DuNkX49CjE3fsA6KLJk/RcPZBlAPLI=
 ```
+
+#### 사용자API
 |API설명|요청 URL|input|output|
 |:------|:--------------------|:----|:----|
 |계정 생성|POST /api/user/signup|{<br>&nbsp;&nbsp;&nbsp;&nbsp;"ID": "test",<br>&nbsp;&nbsp;&nbsp;&nbsp;"PW": "password"<br>}|{<br>&nbsp;&nbsp;&nbsp;&nbsp;"jwt": "eyJy..."<br>}|
@@ -52,6 +54,7 @@ Authorization: Bearer eyJyb2xlIjoidXNlciIsImFsZyI6IkhTMjU2In0=.eyJpZCI6InRlc3Qif
 
 ---
 
+#### 기본 조회/추가/수정 API
 |API설명|요청 URL|input|output|
 |:------|:--------------------|:----|:----|
 |파일 데이터 저장|POST /api/eco/dump-data|||
@@ -61,6 +64,7 @@ Authorization: Bearer eyJyb2xlIjoidXNlciIsImFsZyI6IkhTMjU2In0=.eyJpZCI6InRlc3Qif
 
 ---
 
+#### 검색 API
 |API설명|요청 URL|input|output|
 |:------|:--------------------|:----|:----|
 |특정지역 프로그램|GET /api/eco/region-program|{<br>&nbsp;&nbsp;&nbsp;&nbsp;"region": "강원도"<br>}|{<br>&nbsp;&nbsp;&nbsp;&nbsp;"programs": [<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"prgm_name": "자연과 문화를 함께 즐기는 설악산 기행",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"theme": "문화생태체험,자연생태체험,"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"prgm_name": "[설악산] 설악산에서 길을 묻다(설악을 내 품에)",<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"theme": "아동·청소년 체험학습,"<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}, ...<br>&nbsp;&nbsp;&nbsp;&nbsp;],<br>&nbsp;&nbsp;&nbsp;&nbsp;"region": "reg7283"<br>}|
